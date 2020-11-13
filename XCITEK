@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+      <title>Xcitek</title>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link  rel="shortcut icon" href="C:\Users\admin\Pictures\pictur\XCITEK.png">
+        
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+          
+      <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oxygen&display=swap" rel="stylesheet">
+       <style>
+       * {
+       box-sizing: border-box;
+       }
+
+      
+         #logo {
+            font-family: 'Anton', sans-serif;
+            color: white;
+        }
+      
+
+        body {
+          background-image: url('bigcity.png');
+          background-size: 100% 100%;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-color: black;
+        }
+       
+
+       logo {
+         font-size: 40px;
+       }
+
+       logo:hover {
+        cursor: grab;
+       }
+
+      .container {
+           background-color: white;
+           background-opacity: 50%;
+           color: black;
+           border: 5px solid black;
+           width: 50%;
+           height: 250px;
+           alignment: center;
+           margin: 100px;
+           border-radius: 10px;
+     }
+
+     .sign_up {
+        border: black 5px solid;
+        background-color: blue;
+        font-size: 40px;
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+        border-radius: 10px;
+     }
+
+      .sign_in {
+        border: black 5px solid;
+        background-color: blue;
+        font-size: 40px;
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+        border-radius: 10px;
+     }
+
+   .sign_up:hover {
+        border: black 5px solid;
+        background-color: white;
+        font-size: 40px;
+        text-decoration: none;
+        color: blue;
+        margin: 10px;
+        border-radius: 10px;
+     }
+
+      .sign_in:hover {
+        border: black 5px solid;
+        background-color: white;
+        font-size: 40px;
+        text-decoration: none;
+        color: blue;
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+    a {
+      margin: 4px;
+      text-decoration: none;
+  }
+
+    a:hover { 
+       background-color: blue;
+       color: white;
+       text-decoration: none;
+       margin: 4px;
+  }
+
+  .footer {
+    position-bottom: 0px;
+    width: 100%;
+    background-color: white;
+    border: 5px solid black;
+}
+
+.mySpan:hover {
+    cursor: not-allowed;
+}
+     
+
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+#sidenav_button {
+    border: 5px solid white;
+    color: white;
+}
+
+#sidenav_button:hover {
+  cursor: grab;
+  background-color: white;
+  color: black;
+}
+
+    
+  
+     
+       </style>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</head>
+<body onload="myFunction()">
+<div id="loader"></div>
+<div style="display: none;"id="myDiv" class="animate-bottom" >
+<nav style="background-color: black;">
+
+<!-- Use any element to open the sidenav -->
+<span id="sidenav_button" onclick="openNav()">OPEN MENU</span>
+</nav>
+<HR color="white">
+<div class="my_logo_logo">
+
+
+<img type="logo" src="C:\Users\admin\Pictures\pictur\XCITEK.png">
+<logo><span id="logo">XCITEK&TRADE;</span></logo>
+
+</div>
+
+
+<form>
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="XCITEK.CO.welcome.html">Welcome page</a>
+  <a href="XCITEK.CO.sign_up.html">Sign up(alt+u)</a>
+  <a href="XCITEK.CO.sign_in.html">Sign in(alt+i)</a>
+  <a href="#">Terms of Service</a>
+  <a href="#">About</a>
+   <a href="#">Contact Us</a>
+   <a href="#">like us</a>
+   <a href="#">visit us</a>
+   <a href="#">contact us</a>
+   <a href="Tel:7401323622">Call Us</a>
+    
+  
+</div>
+
+<center>
+<div id="main">
+   <div class="container" style="position: center;">
+      <div class="header">
+        <span><center><label style="font-size: 40px; ">WELCOME!</label></span></center>
+           <div>
+           </div>
+           <div class="form">
+              <a href="XCITEK.CO.sign_up.html" accesskey="u"><div class="sign_up"><i class="fa fa-coffee"></i>Sign Up</div></a>
+                 
+                <a href="XCITEK.CO.sign_in.html" accesskey="i"><div class="sign_in">Sign In</div></a>
+                 
+            </div>
+       </div>
+   </div>
+</center>
+
+<div class="footer">
+    <span class="mySpan" style="float: left;">&copy; XCITEK</span><center><a href="#">Terms of service</a>  <a href="#">About</a>  <a href="https://www.facebook.com/" target="_blank">like us</a></center>
+      <span class="mySpan"style="float: left;">We code &trade;</span><center><a href="#"> visit us</a><a href="#"> View us</a> <a href="#">contact us</a> </center> 
+      <div id="google_translate_element"></div>
+
+
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
